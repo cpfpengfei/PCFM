@@ -1,0 +1,54 @@
+# Modifications for PCFM © 2025 Pengfei Cai (Learning Matter @ MIT) and Utkarsh (Julia Lab @ MIT), licensed under the MIT License.
+# Original portions © Amazon.com, Inc. or its affiliates, licensed under the Apache License 2.0.
+# we follow the same set-up as Cheng et al. for heat equation FFM model pretraining 
+train:
+  seed: 42
+  max_iter: 20000
+  batch_size: 256
+  log_freq: 50
+  val_freq: 200
+  save_freq: 2000
+  max_grad_norm: 100.
+  valid_max_batch: 32
+  optimizer:
+    type: adam
+    lr: 3.e-4
+    weight_decay: 0.
+    beta1: 0.9
+    beta2: 0.999
+  scheduler:
+    type: plateau
+    factor: 0.5
+    patience: 10
+    min_lr: 1.e-4
+
+datasets:
+  type: diffusion
+  nx: 100
+  nt: 100
+  visc_range: [ 1., 5. ]
+#  phi_range: [ 0., 0. ]
+  t_range: [ 0., 1. ]
+  train:
+    n_data: 5000
+  test:
+    n_data: 1000
+
+model:
+  kernel_length: 0.001
+  kernel_variance: 1.
+encoder:
+  type: fno
+  n_modes: [ 32, 32 ]
+  emb_channels: 32
+  hidden_channels: 64
+  proj_channels: 256
+  n_layers: 4
+cond_type: ic
+
+n_sample: 2
+n_eval: 1
+sample_dims: [ 100, 100 ]
+vis:
+  vmin: -1
+  vmax: 1

@@ -1,0 +1,51 @@
+# for pretraining FFM model for the reaction-diffusion dataset
+train:
+  seed: 42
+  max_iter: 20000
+  batch_size: 256
+  log_freq: 50
+  val_freq: 200
+  save_freq: 2000
+  max_grad_norm: 100.0
+  valid_max_batch: 32
+  optimizer:
+    type: adam
+    lr: 3.e-4
+    weight_decay: 0.0
+    beta1: 0.9
+    beta2: 0.999
+  scheduler:
+    type: plateau
+    factor: 0.5
+    patience: 10
+    min_lr: 1.e-4
+
+datasets:
+  type: rd1d
+  root: datasets/data
+  train:
+    data_file: RD_neumann_train_nIC80_nBC80.h5
+  test:
+    data_file: RD_neumann_test_nIC30_nBC30.h5
+
+model:
+  kernel_length: 0.001
+  kernel_variance: 1.0
+
+encoder:
+  type: fno
+  n_modes: [32, 32]
+  emb_channels: 32
+  hidden_channels: 64
+  proj_channels: 256
+  n_layers: 4
+
+cond_type: ic
+
+n_sample: 2  
+n_eval: 1   
+sample_dims: [128, 100]
+
+vis:
+  vmin: 0.0
+  vmax: 1.0
