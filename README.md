@@ -1,4 +1,5 @@
 # PCFM: Physics-Constrained Flow Matching
+[![arXiv](https://img.shields.io/badge/arXiv-2506.04171-b31b1b.svg)](https://arxiv.org/abs/2506.04171)
 
 This repo implements *Physics-Constrained Flow Matching (PCFM)* -- a framework that enforces physical constraints in PDE settings with flow-based generative models. 
 
