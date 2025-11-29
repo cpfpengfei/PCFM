@@ -24,7 +24,7 @@ This repo implements *Physics-Constrained Flow Matching (PCFM)* -- a framework t
 
 
 <div align="center">
-<img src="images/pcfm/pcfm_summary.png" width="90%" alt="PCFM summary figure">
+<img src="assets/pcfm_figure.png" width="67%" alt="PCFM summary figure">
 </div>
 
 
