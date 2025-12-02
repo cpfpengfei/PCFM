@@ -25,10 +25,7 @@ This repo implements *Physics-Constrained Flow Matching (PCFM)* -- a framework t
 
 PCFM is released under the **MIT License**.
 
-This repository includes components derived from  
-[amazon-science/ECI-sampling](https://github.com/amazon-science/ECI-sampling)  
-licensed under the **Apache License 2.0**.  
-See [`LICENSE`](./LICENSE), [`LICENSE-APACHE-2.0`](./LICENSE-APACHE-2.0), and [`NOTICE`](./NOTICE) for details.
+This repository includes components derived from [amazon-science/ECI-sampling](https://github.com/amazon-science/ECI-sampling) licensed under the **Apache License 2.0**. See [`LICENSE`](./LICENSE), [`LICENSE-APACHE-2.0`](./LICENSE-APACHE-2.0), and [`NOTICE`](./NOTICE) for details.
 
 
 
