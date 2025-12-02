@@ -1,5 +1,4 @@
 # PCFM: Physics-Constrained Flow Matching
-<div align="center">
 
 [![arXiv](https://img.shields.io/badge/arXiv-2506.04171-b31b1b.svg)](https://arxiv.org/abs/2506.04171)
 &nbsp;•&nbsp;
@@ -7,9 +6,6 @@
 &nbsp;•&nbsp;
 [Julia Version](https://github.com/utkarsh530/PCFM.jl)
 
-</div>
-
-<div align="center">
   
 [**Utkarsh\***](https://www.linkedin.com/in/utkarsh530/) •
 [**Pengfei Cai\***](https://www.linkedin.com/in/pengfei-cai/) •
@@ -20,12 +16,9 @@ Christopher Rackauckas
 <em>*To appear at <a href="https://neurips.cc/virtual/2025/poster/117071">NeurIPS 2025</a>.*</em>
 </div>
 
-This repo implements *Physics-Constrained Flow Matching (PCFM)* -- a framework that enforces physical constraints in PDE settings with flow-based generative models. 
+This repo implements *Physics-Constrained Flow Matching (PCFM)* -- a framework that enforces physical constraints during sampling of flow-based generative models. 
 
-
-<div align="center">
 <img src="assets/pcfm_figure.png" width="67%" alt="PCFM summary figure">
-</div>
 
 
 ## License
