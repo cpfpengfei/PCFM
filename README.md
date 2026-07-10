@@ -13,7 +13,7 @@ Alan Edelman •
 Rafael Gómez-Bombarelli •
 Christopher Rackauckas  
 
-<em>*To appear at <a href="https://neurips.cc/virtual/2025/poster/117071">NeurIPS 2025</a>.*</em>
+ <a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/eacce1f7d11e2c3a7568468e0eff5d33-Abstract-Conference.html">NeurIPS 2025</a>
 </div>
 
 This repo implements *Physics-Constrained Flow Matching (PCFM)* -- a framework that enforces physical constraints during sampling of flow-based generative models. 
