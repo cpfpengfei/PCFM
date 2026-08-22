@@ -4,7 +4,7 @@ import gc
 import torch
 from tqdm import tqdm
 from torchdiffeq import odeint
-from .pcfm_sampling import make_grid, pcfm_batched, pcfm_2d_batched
+from .pcfm_sampling import fast_project_batched, make_grid, pcfm_batched, pcfm_2d_batched
 
 
 class FFM_sampler:
@@ -33,6 +33,7 @@ class FFM_sampler:
                 use_vmap=use_vmap
             )
             u = u + dt * v_proj
+        u = fast_project_batched(u, hfunc, mode=mode, newtonsteps=newtonsteps, eps=eps, use_vmap=use_vmap)
         return u.detach()
 
     @torch.no_grad()
@@ -163,6 +164,7 @@ class FFM_NS_sampler:
                 eps=eps
             )
             u = u + dt * v_proj
+        u = fast_project_batched(u, hfunc, mode=mode, newtonsteps=newtonsteps, eps=eps)
         return u.detach()
 
     @torch.no_grad()
